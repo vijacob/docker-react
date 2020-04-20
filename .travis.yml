@@ -8,11 +8,11 @@ before_install:
 script:
   - docker run -e CI=true vijacob/docker-react npm run test -- --coverage
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-west-2"
-  app: docker-react
-  env: "Docker-env"
-  bucket_name: "docker"
-  on:
-    branch: master
+#deploy:
+#  provider: elasticbeanstalk
+#  region: "us-west-2"
+#  app: docker-react
+#  env: "Docker-env"
+#  bucket_name: "docker"
+#  on:
+#    branch: master
