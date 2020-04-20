@@ -1,0 +1,9 @@
+sudo: required
+service:
+  - docker
+
+before_install:
+  - docker build -t vijacob/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true vijacob/docker-react npm run test -- --coverage
